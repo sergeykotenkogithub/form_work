@@ -68,12 +68,14 @@ h6 {
   font-weight: inherit;
   font-size: inherit; }
 
+.none {
+  display: none; }
+
 body {
   background: #F4F5FA; }
 
 .container {
   max-width: 1336px;
-  height: 828px;
   margin: 0  auto; }
   .container__form {
     position: relative;
@@ -100,6 +102,8 @@ body {
   margin: 0 auto; }
 .form__addBtn {
   margin-bottom: 12px; }
+.form__radio {
+  padding-bottom: 23px; }
 
 .form-value:not(:last-child) {
   padding-bottom: 25px; }
@@ -107,6 +111,52 @@ body {
   padding-bottom: 19px; }
 .form-value__line {
   opacity: 0.5;
+  border: 1.5px solid #E1E3EE; }
+
+.formRadio {
+  width: 370px; }
+  .formRadio__input {
+    display: none; }
+    .formRadio__input:checked + .formRadio__label::after {
+      transform: scale(1); }
+  .formRadio__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 23px 12px 15px 17px; }
+    .formRadio__label::before {
+      content: "";
+      align-self: flex-start;
+      flex: 0 0 22px;
+      height: 22px;
+      background-color: #fff;
+      border: 1.5px solid #E1E3EE;
+      border-radius: 50%;
+      margin: 0 10px 0 0; }
+    .formRadio__label::after {
+      transition: transform 0.3s ease 0s;
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 22px;
+      width: 12px;
+      height: 12px;
+      background: #23C967;
+      border-radius: 50%;
+      transform: scale(0); }
+
+.formRadio__product input[type=radio]:checked + label {
+  background: #F4F5FA; }
+
+._firstLabelProduct:hover {
+  background: #F4F5FA; }
+
+.labelProduct__content {
+  position: relative;
+  top: -10px; }
+
+._firstLabelProduct {
+  border-radius: 15px 15px 0px 0px;
   border: 1.5px solid #E1E3EE; }
 
 /*# sourceMappingURL=style.css.map */

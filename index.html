@@ -12,12 +12,12 @@
 
     <div class="container">
         <div class="container__form form">
-          <div class="form__wrapper">
+          <div class="form__wrapper none">
             <div class="form__content"> 
               <form action="">
 
                   <div class="form-value">
-                    <div class="form-value__title">Info</div> 
+                    <div class="form-value__title form-title">Info</div> 
                     <div>
                       <label> 
                         Enter your email address
@@ -53,13 +53,100 @@
 
                   <div>We offer discount up to 36% for multiple checks</div>
 
-              </form>
+              </form>          
               <button>Submit and Pay <span>24.99 USD</span></button>
             </div>
           </div>                        
           <div class="form__background"></div>
+        </div> 
+
+
+    <!-- 2я форма -->
+
+
+    <div class="container__form form">
+      <div class="form__wrapper">
+        <div class="form__content">         
+          
+          <form action="">
+
+            <div class="form-title">Adding more products</div>
+            
+            
+            <div>The more items you check, the better the price.</div>
+            <!-- <div>5 products for 80 usd / 16$ for each</div>  -->
+
+            <div class="form__radio formRadio">
+
+              <div class="formRadio__product">
+                <input class="formRadio__input" id="formProductFive" type="radio" name="products" value="5" checked>           
+                <label class="formRadio__label labelProduct _firstLabelProduct"  for="formProductFive">
+                  <div class="labelProduct__content">
+                    <div>5 products for 80 usd / 16$ for each</div>
+                    <div>You safe 36% on each patent check </div>  
+                  </div>                               
+                </label>
+              </div>
+
+              <div class="formRadio__product">
+                <input class="formRadio__input" id="formProductFor" type="radio" name="products" value="4">           
+                <label class="formRadio__label labelProduct _firstLabelProduct"  for="formProductFor">
+                  <div class="labelProduct__content">
+                    <div>5 products for 80 usd / 16$ for each</div>
+                    <div>You safe 36% on each patent check </div>  
+                  </div>                               
+                </label>
+              </div>
+
+              <div class="formRadio__product">
+                <input class="formRadio__input" id="formProductThree" type="radio" name="products" value="3">           
+                <label class="formRadio__label labelProduct _firstLabelProduct"  for="formProductThree">
+                  <div class="labelProduct__content">
+                    <div>5 products for 80 usd / 16$ for each</div>
+                    <div>You safe 36% on each patent check </div>  
+                  </div>                               
+                </label>
+              </div>
+
+
+
+
+              <!-- <div class="formRadio__product">
+                <input class="formRadio__input" id="formProductFor" type="radio" name="products" value="4">           
+                <label for="formProductFor">Четвёртый</label>
+              </div>      
+
+              <div>
+                <input class="formRadio__input" id="formProductThree" type="radio" name="products" value="3">           
+                <label for="formProductThree">Третий</label>
+              </div>      
+              
+              <div>
+                <input class="formRadio__input" id="formProductTwo" type="radio" name="products" value="2">           
+                <label for="formProductTwo">2sadasdssad</label>
+              </div>      
+              
+              <div>
+                <input class="formRadio__input" id="formProductOne" type="radio" name="products" value="1">           
+                <label for="formProductOne">1asdasdsad</label>
+              </div>       -->
+              
+            </div>
+  
+
+            <button type="submit" id="formProductSubmit">Continue</button>
+
+          </form>             
+
+        
+         
         </div>
+      </div>                        
+      <div class="form__background"></div>
+
     </div>
+
+  </div>
 
     <script src="js/script.js"></script>
   </body>
