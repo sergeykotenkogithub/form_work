@@ -5,32 +5,62 @@ body {
 }
 
 .container {
-    width: 1336px;
+    max-width: 1336px;
     height: 828px;
     margin: 0  auto;
+    &__form {
+        position: relative;
+        margin: 138px 0 155px 0px;
+        display: flex;
+        // justify-content: flex-end;
+        // padding-right: 141px;
+    }
 }
 
 .form {
-    position: relative;
-    background: #FFFFFF;
-    width: 440px;
-    height: 535px;  
-    margin: 138px 0 155px 755px;     
-    -webkit-border-radius: 40px;
-    -webkit-border-top-left-radius: 0;
-    -moz-border-radius: 40px;
-    -moz-border-radius-topleft: 0;
-    border-radius: 40px;
-    border-top-left-radius: 0;
+    &__wrapper {
+        position: relative;
+        background: #FFFFFF;
+        width: 440px;
+        height: 535px;  
+        border-radius: 0px 50px 50px 50px;
+        z-index: 100;
+    }
 
     &__background {
         position: absolute;
         background: url(/img/10.png);
         width: 102.54px;
         height: 118px;
-        right: -41px;
-        z-index: 1;
-        top: 0;
-        left: 0;
+        right: 115px;
+        top: -28px;
+        
+    }
+    &__content {
+        width: 370px;
+        padding: 35px 0;
+        margin: 0 auto;
+    }
+    &__addBtn {
+        margin-bottom: 12px;
+    }
+}
+
+.form-value {
+
+    &:not(:last-child) {
+        padding-bottom: 25px;
+    }
+
+    &:last-child {
+        padding-bottom: 19px;
+    }
+
+    &__title {
+    }
+
+    &__line {
+        opacity: 0.5;
+        border: 1.5px solid #E1E3EE;
     }
 }
