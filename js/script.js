@@ -11,10 +11,8 @@
 let formProductSubmit = document.getElementById('formProductSubmit')
 
 formProductSubmit.addEventListener('click', () => {
+   
     event.preventDefault();
-
-    // let input =  document.querySelector('.formRadio__input').value
-    // console.log(input);
 
     let radio = document.querySelectorAll('.formRadio__input')
     let data
@@ -24,11 +22,44 @@ formProductSubmit.addEventListener('click', () => {
         }       
     }
 
+    
 
-    // Сдесь будет рендер формы с продуктами
+
+    // Рендер формы с продуктами
+
     for (let i = 1; i <= data; i++) {
-        console.log(i)
+
+        let formSubmit = document.querySelector('.form__addBtn')
+        formSubmit.insertAdjacentHTML('beforeBegin',`
+
+            <div class="form-value">
+
+                <div class="form-value__title">Product ${i}</div> 
+                
+                <div>
+                <label> 
+                    Enter main keyword for the product
+                    <input type="text" placeholder="for example, sylicon wine cup">  
+                </label> 
+                </div>
+                
+                <div class="form-value__line"></div>   
+                
+                <div>
+                <label> 
+                    Enter link to the similar product as a reference
+                    <input type="text" placeholder="https://...">  
+                </label>
+                </div>                   
+            
+                <div class="form-value__line"></div>                 
+
+            </div>
+
+        `)
     }
+
+    data = 0;
 
 })
 
