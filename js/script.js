@@ -23,17 +23,23 @@ formProductSubmit.addEventListener('click', () => {
     }
 
     
+    // document.querySelector('.form-value__allProduct').remove
 
+    var myNode = document.querySelector('.form-value__allProduct')
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
 
     // Рендер формы с продуктами
 
     for (let i = 1; i <= data; i++) {
 
-        let formSubmit = document.querySelector('.form__addBtn')
-        formSubmit.insertAdjacentHTML('beforeBegin',`
+        let formSubmit = document.querySelector('.form-value__allProduct')
+        formSubmit.insertAdjacentHTML('afterBegin',`
+           
+               
 
             <div class="form-value">
-
                 <div class="form-value__title">Product ${i}</div> 
                 
                 <div>
@@ -50,16 +56,16 @@ formProductSubmit.addEventListener('click', () => {
                     Enter link to the similar product as a reference
                     <input type="text" placeholder="https://...">  
                 </label>
-                </div>                   
-            
-                <div class="form-value__line"></div>                 
+                </div>             
 
-            </div>
+            </div>               
+                   
+              
 
         `)
     }
 
-    data = 0;
+    // data = 0;
 
 })
 
