@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+  </head>
+  <body>
+
+    <!-- Gilroy шрифт -->
+
+    <div class="container">
+        <div class="container__form form _formOne">
+          <div class="form__wrapper">
+            <div class="form__content"> 
+              <form class="formSubmit" action="#">
+                
+                <div class="formScroll">
+                
+                  <div class="form-value">
+                    <div class="form-value__title form-title">Info</div> 
+                    <div>
+                      <label> 
+                        <div class="formValue__label">Enter your email address</div>                        
+                        <input class="formValue__labelInput" type="text" placeholder="team@checkforpatent.com">  
+                      </label>  
+                    </div>
+                    <div class="form-value__line"></div>                 
+                  </div>
+                  
+                  <!-- Записывается сколько появилось продуктов -->
+                  <input class="allProduct" id="elems" value="1" type="text" hidden>
+
+                  <!-- Тут все продукты -->
+                  <div class="form-value__allProduct">
+                    
+                    <div class="form-value">
+                      <div class="form-value__title">
+                        <div>Product 1</div>     
+                      </div> 
+                      
+                      <div>
+                        <label> 
+                          <div class="formValue__label">Enter main keyword for the product</div>                          
+                          <input class="formValue__labelInput" type="text" placeholder="for example, sylicon wine cup">  
+                        </label> 
+                      </div>
+                      
+                      <div class="form-value__line"></div>   
+                      
+                      <div>
+                        <label> 
+                          <div class="formValue__label">Enter link to the similar product as a reference</div>
+                          <input class="formValue__labelInput" type="text" placeholder="https://...">  
+                        </label>
+                      </div>             
+
+                      <div class="form-value__line"></div>   
+
+                    </div>  
+
+                  </div>
+                  
+                  <button class="form__addBtn">Add more products  <img src="/img/add.svg" alt="add"> </button>               
+
+                  <div class="form__info">We offer discount up to 36% for multiple checks</div>
+
+                </div>
+
+                <!-- <div class="btn btnSubmit">Submit and Pay <span id="form__price">24.99</span> USD</div> -->
+                <div class="btn btnSubmit">Submit and Pay <span id="form__price">24.99</span> USD</div>
+
+                <!-- Кнопка с загрузкой -->
+                <button  class="btn btnLoading" id="send"> <img class="loading" src="/img/load.svg" alt="load"> </button> 
+                
+                <div class="form__secure"> 
+                  <img src="/img/secure.svg" alt="secure">
+                  <div> Secure payment with Stripe</div>                   
+                </div>
+
+              </form>          
+             
+              
+            </div>
+          </div>                        
+          <div class="form__background _formOne"></div>
+        </div> 
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

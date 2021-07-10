@@ -1,25 +1,29 @@
+// При нажатие на кнопку первой формы
+
 let formAdd = document.querySelector(".form__addBtn")
 
 formAdd.addEventListener('click', () => {
+    event.preventDefault();
+
     let oneForm = document.querySelectorAll('._formOne')
+    let twoForm = document.querySelectorAll('._formTwo')
+
+    // Убирает
     oneForm.forEach(e => {
         e.style.display = 'none';
     })
-    event.preventDefault();
-    console.log('нажата');
+
+    // Добавляет
+    twoForm.display = 'flex';
+    twoForm.forEach(e => {
+        e.style.display = 'flex';
+    })    
    
 })
 
-
-
-
+//..........................................................................................................................................
 
 // 2я форма, выбор количество продуктов
-
-//
-// 
-// 
-// 
 
 let formProductSubmit = document.getElementById('formProductSubmit')
 
@@ -60,7 +64,6 @@ formProductSubmit.addEventListener('click', () => {
 
 
     // Рендер формы с продуктами
-
 
     for (let i = 1; i <= data; i++) {
 
@@ -122,14 +125,16 @@ formProductSubmit.addEventListener('click', () => {
         elem.addEventListener('click', (e) => {
             
             let priceProduct = document.getElementById('form__price')  
-            
             let newPrice = priceProduct.textContent;
-            let allProduct = document.querySelector('.allProduct').value // Получаю сколько продуктов                                  
+            let allProduct = document.querySelector('.allProduct').value // Получаю сколько продуктов                                          
+            
+            // Удаление продукта
+            let productClosest = elem.closest(".form-value") // Ближайщий родитель
+            productClosest.remove()
 
             // Если больше одного продукта
             if (allProduct > 2) {
                 let newProduct = (newPrice / allProduct) + 2 //22 Новыя цена
-                console.log(newProduct)
                 let newQuantity = allProduct - 1
     
                 // установка нового продукта
@@ -145,7 +150,38 @@ formProductSubmit.addEventListener('click', () => {
         })
     })
 
+    let oneForm = document.querySelectorAll('._formOne')
+    let twoForm = document.querySelectorAll('._formTwo')
+
+    // Убирает
+    oneForm.forEach(e => {
+        e.style.display = 'flex';
+    })
+
+    // Добавляет
+    twoForm.display = 'flex';
+    twoForm.forEach(e => {
+        e.style.display = 'none';
+    })   
+
 })
 
 
+let btnSubmit = document.querySelector(".btnSubmit")
+let btnLoading = document.querySelector(".btnLoading")
 
+
+btnSubmit.addEventListener('click', (e) => {
+
+    event.preventDefault
+
+    btnSubmit.style.display = 'none';
+    btnLoading.style.display = 'block'; 
+
+    // Перенаправление на другую страницу
+
+    setTimeout(function(){
+        window.location.replace("/paymentsuccess.html")
+    }, 2000); // 2 секунды
+
+})

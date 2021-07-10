@@ -149,18 +149,16 @@ body {
   .form__secure img {
     padding-right: 5px; }
 
-.form-value:not(:last-child) {
+.form-value {
   padding-bottom: 25px; }
-.form-value:last-child {
-  padding-bottom: 19px; }
-.form-value__title {
-  display: flex;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 134.9%; }
-.form-value__line {
-  opacity: 0.5;
-  border: 1.5px solid #e1e3ee; }
+  .form-value__title {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 134.9%; }
+  .form-value__line {
+    opacity: 0.5;
+    border: 1.5px solid #e1e3ee; }
 
 .formRadio {
   width: 370px; }
@@ -248,7 +246,11 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
-  margin-bottom: 11px; }
+  margin-bottom: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
 
 ._scroll {
   overflow-y: scroll;
@@ -275,5 +277,25 @@ body {
   font-size: 13px;
   line-height: 16px;
   color: #A7A2CB; }
+
+._formTwo {
+  display: none; }
+
+.loading {
+  animation-name: loading;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.btnLoading {
+  display: none; }
+
+.form__price {
+  padding: 0px 5px; }
 
 /*# sourceMappingURL=style.css.map */

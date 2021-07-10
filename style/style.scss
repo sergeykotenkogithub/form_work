@@ -110,13 +110,13 @@ body {
 }
 
 .form-value {
-  &:not(:last-child) {
+  // &:not(:last-child) {
     padding-bottom: 25px;
-  }
+  // }
 
-  &:last-child {
-    padding-bottom: 19px;
-  }
+  // &:last-child {
+  //   padding-bottom: 19px;
+  // }
 
   &__title {
     display: flex;
@@ -243,6 +243,11 @@ body {
     line-height: 22px;
     color: #FFFFFF;
     margin-bottom: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 ._scroll {
@@ -287,4 +292,32 @@ body {
   font-size: 13px;
   line-height: 16px;  
   color: #A7A2CB;
+}
+
+._formTwo {
+  display: none;
+}
+
+.loading {
+  animation-name: loading;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btnLoading {
+  display: none;
+}
+
+.form__price {
+  padding: 0px 5px;
 }
