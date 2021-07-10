@@ -144,7 +144,13 @@ formProductSubmit.addEventListener('click', () => {
                 // Запись новой цен            
                 priceProduct.innerText = newPrice
             }  else {
-                priceProduct.innerText = 24.99
+
+                let formScroll = document.querySelector('.formScroll');
+                formScroll.classList.remove("_scroll");
+                priceProduct.innerText = 24.99;
+
+                const myNode = document.querySelector('.formValue__delete');
+                myNode.remove();
             } 
 
         })
