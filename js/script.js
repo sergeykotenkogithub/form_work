@@ -14,18 +14,16 @@ formProductSubmit.addEventListener('click', () => {
     let radio = document.querySelectorAll('.formRadio__input')
     let data;
     let price;
-    let discount;
     for (let i = 0; i < radio.length; i++) {
         if(radio[i].checked) {
             data = radio[i].value
             price = radio[i].getAttribute('data-price')    // Получение цены          
-            discount = radio[i].getAttribute('data-discount')    // Получение цены 1 товара         
         }       
     }       
 
     // Удаление dom элементов, для замены на выбронное количество
 
-    var myNode = document.querySelector('.form-value__allProduct')
+    const myNode = document.querySelector('.form-value__allProduct')
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
     }
@@ -46,7 +44,6 @@ formProductSubmit.addEventListener('click', () => {
 
     for (let i = 1; i <= data; i++) {
 
-       let a = i + discount         
 
         let formSubmit = document.querySelector('.form-value__allProduct')
 
@@ -56,15 +53,15 @@ formProductSubmit.addEventListener('click', () => {
             <div class="form-value">
               
               <div class="form-value__title">
-                <div>Product ${i}</div>
-                <button class="formValue__delete" data-product="${i}" data-one="${a}">[X]</button>
+                <div>Product ${i}</div>                
+                <button class="formValue__delete" data-product="${i}">[X]</button>
               </div> 
 
                 
                 <div>
                 <label> 
-                    Enter main keyword for the product
-                    <input type="text" placeholder="for example, sylicon wine cup">  
+                    <div class="formValue__label">Enter main keyword for the product</div>
+                    <input class="formValue__labelInput" type="text" placeholder="for example, sylicon wine cup">  
                 </label> 
                 </div>
                 
@@ -72,17 +69,24 @@ formProductSubmit.addEventListener('click', () => {
                 
                 <div>
                 <label> 
-                    Enter link to the similar product as a reference
-                    <input type="text" placeholder="https://...">  
+                    <div class="formValue__label"> Enter link to the similar product as a reference</div>
+                    <input class="formValue__labelInput" type="text" placeholder="https://...">  
                 </label>
-                </div>             
+                </div>          
+                
+                <div class="form-value__line"></div>   
 
             </div>               
-                   
-              
 
         `)
 
+    }
+
+    if(data == "1") {
+        const myNode = document.querySelector('.formValue__delete')
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
     }
 
     // При нажатие удалить на 2й форме
