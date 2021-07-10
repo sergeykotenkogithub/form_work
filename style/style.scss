@@ -129,9 +129,6 @@ body {
     opacity: 0.5;
     border: 1.5px solid #e1e3ee;
   }
-//   &__delete {
-
-//   }
 }
 
 .formRadio {
@@ -145,10 +142,9 @@ body {
   }
   &__label {
     position: relative;
-    // display: inline-flex;
     display: flex;
     align-items: center;
-    padding: 23px 12px 15px 17px;
+    padding: 17px 12px 0px 17px;
 
     &::before {
       content: "";
@@ -158,13 +154,13 @@ body {
       background-color: #fff;
       border: 1.5px solid #e1e3ee;
       border-radius: 50%;
-      margin: 0 10px 0 0;
+      margin: 0 17px 0 0;
     }
     &::after {
       transition: transform 0.3s ease 0s;
       content: "";
       position: absolute;
-      top: 28px;
+      top: 22px;
       left: 22px;
       width: 12px;
       height: 12px;
@@ -177,6 +173,9 @@ body {
 
 .formRadio__product input[type="radio"]:checked + label {
   background: #f4f5fa;
+  .labelProduct__discont {
+    color: $colorActive;
+  }
 }
 
 .labelProduct {
@@ -194,6 +193,9 @@ body {
 
 ._firstLabelProduct:hover, ._middleLabelProduct:hover, ._lastLabelProduct:hover {
     background: #f4f5fa;
+    .labelProduct__discont {
+      color: $colorActive;
+    }
   }
 
   ._middleLabelProduct {
@@ -203,23 +205,32 @@ body {
   ._lastLabelProduct {
     border-radius: 0px 0px 15px 15px;
     border: 1.5px solid #e1e3ee;
+    padding-bottom: 19px;
+    .labelProduct__content {
+      top: 0;
+    }
   }
 
   .formValue {
-      &__label {
-        font-size: 16px;
-        line-height: 145%;
-        opacity: 0.8;
-        padding-bottom: 12px;
-        padding-top: 12px;
-      }
-      &__labelInput {
-        font-size: 16px;
-        line-height: 19px;        
-        color: #D0D3E2;
-        padding-bottom: 7px;
-        width: 100%;     
-      }
+    &__label {
+      font-size: 16px;
+      line-height: 145%;
+      opacity: 0.8;
+      padding-bottom: 12px;
+      padding-top: 12px;
+    }
+    &__labelInput {
+      font-size: 16px;
+      line-height: 19px;        
+      color: #D0D3E2;
+      padding-bottom: 7px;
+      width: 100%;     
+    }
+    &__delete {
+      background: none;
+      width: 13px;
+      padding-left: 5px;
+    }
   }
 
 .btn {
@@ -234,3 +245,46 @@ body {
     margin-bottom: 11px;
 }
 
+._scroll {
+  overflow-y: scroll;
+  height: 368px;
+  margin-bottom: 25px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background:  #E1E3EE
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $colorActive;
+    border-radius: 5px;
+  }
+
+  // Для firefox
+
+  scrollbar-width: thin;
+  scrollbar-color: $colorActive #E1E3EE;
+
+}
+
+
+// ._formOne {
+//   display: none;
+// }
+
+.labelProduct__quantity {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
+.labelProduct__discont {
+  font-size: 13px;
+  line-height: 16px;  
+  color: #A7A2CB;
+}

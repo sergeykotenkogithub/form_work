@@ -1,9 +1,25 @@
-// let formAdd = document.querySelector(".form__addBtn")
+let formAdd = document.querySelector(".form__addBtn")
 
-// formAdd.addEventListener('click', () => {
-//     event.preventDefault();
-//     console.log('нажата');
-// })
+formAdd.addEventListener('click', () => {
+    let oneForm = document.querySelectorAll('._formOne')
+    oneForm.forEach(e => {
+        e.style.display = 'none';
+    })
+    event.preventDefault();
+    console.log('нажата');
+   
+})
+
+
+
+
+
+// 2я форма, выбор количество продуктов
+
+//
+// 
+// 
+// 
 
 let formProductSubmit = document.getElementById('formProductSubmit')
 
@@ -37,10 +53,14 @@ formProductSubmit.addEventListener('click', () => {
 
     elems.setAttribute('value', data)
 
+    // Добавление скролла
+
+    let formScroll = document.querySelector('.formScroll')
+    formScroll.classList.add("_scroll")
+
 
     // Рендер формы с продуктами
 
-    // <div class="form-value__title">Product ${i}</div> 
 
     for (let i = 1; i <= data; i++) {
 
@@ -54,7 +74,7 @@ formProductSubmit.addEventListener('click', () => {
               
               <div class="form-value__title">
                 <div>Product ${i}</div>                
-                <button class="formValue__delete" data-product="${i}">[X]</button>
+                <button class="formValue__delete" data-product="${i}"> <img src="/img/del.svg" alt="del"> </button>  
               </div> 
 
                 
@@ -82,7 +102,12 @@ formProductSubmit.addEventListener('click', () => {
 
     }
 
+    // Если выбран 1 продукт
+
     if(data == "1") {
+
+        formScroll.classList.remove("_scroll") // удаление скролла
+
         const myNode = document.querySelector('.formValue__delete')
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);

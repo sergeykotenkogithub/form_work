@@ -11,11 +11,13 @@
     <!-- Gilroy шрифт -->
 
     <div class="container">
-        <div class="container__form form">
-          <div class="form__wrapper none">
+        <div class="container__form form _formOne">
+          <div class="form__wrapper">
             <div class="form__content"> 
               <form class="formSubmit" action="#">
-
+                
+                <div class="formScroll">
+                
                   <div class="form-value">
                     <div class="form-value__title form-title">Info</div> 
                     <div>
@@ -35,7 +37,7 @@
                     
                     <div class="form-value">
                       <div class="form-value__title">
-                        <div>Product 1</div>                  
+                        <div>Product 1</div>     
                       </div> 
                       
                       <div>
@@ -64,35 +66,37 @@
 
                   <div class="form__info">We offer discount up to 36% for multiple checks</div>
 
-                  <button class="btn">Submit and Pay <span id="form__price">24.99</span> USD</button>
-                  
-                  <div class="form__secure"> 
-                    <img src="/img/secure.svg" alt="secure">
-                    <div> Secure payment with Stripe</div>                   
-                  </div>
+                </div>
+
+                <button class="btn">Submit and Pay <span id="form__price">24.99</span> USD</button>
+                
+                <div class="form__secure"> 
+                  <img src="/img/secure.svg" alt="secure">
+                  <div> Secure payment with Stripe</div>                   
+                </div>
 
               </form>          
              
               
             </div>
           </div>                        
-          <div class="form__background"></div>
+          <div class="form__background _formOne"></div>
         </div> 
 
 
     <!-- 2я форма -->
 
 
-    <div class="container__form form">
-      <div class="form__wrapper">
+    <div class="container__form form _formTwo">
+      <div class="form__wrapper ">
         <div class="form__content">         
           
           <form action="">
 
-            <div class="form-title">Adding more products</div>
+            <div class="form-title form-value__title">Adding more products</div>
             
             
-            <div>The more items you check, the better the price.</div>
+            <div class="formValue__label">The more items you check, the better the price.</div>
 
             <div class="form__radio formRadio">
 
@@ -100,8 +104,8 @@
                 <input class="formRadio__input" id="formProductFive" type="radio" name="products" value="5" data-price="80" checked>           
                 <label class="formRadio__label labelProduct _firstLabelProduct"  for="formProductFive" data-discount="18">
                   <div class="labelProduct__content">
-                    <div>5 products for 80 usd / 16$ for each</div>
-                    <div>You safe 36% on each patent check </div>  
+                    <div class="labelProduct__quantity">5 products for 80 usd / 16$ for each</div>
+                    <div class="labelProduct__discont">You safe 36% on each patent check </div>  
                   </div>                               
                 </label>
               </div>
@@ -110,8 +114,8 @@
                 <input class="formRadio__input" id="formProductFor" type="radio" name="products" value="4" data-price="72">           
                 <label class="formRadio__label labelProduct _middleLabelProduct"  for="formProductFor">
                   <div class="labelProduct__content">
-                    <div>4 products for 72 usd / 18$ for each</div>
-                    <div>You safe 28% on each patent check  </div>  
+                    <div class="labelProduct__quantity">4 products for 72 usd / 18$ for each</div>
+                    <div class="labelProduct__discont">You safe 28% on each patent check  </div>  
                   </div>                               
                 </label>
               </div>
@@ -120,8 +124,8 @@
                 <input class="formRadio__input" id="formProductThree" type="radio" name="products" value="3" data-price="60" >           
                 <label class="formRadio__label labelProduct _middleLabelProduct"  for="formProductThree">
                   <div class="labelProduct__content">
-                    <div>3 products for 60 usd / 20$ for each</div>
-                    <div>You safe 20% on each patent check  </div>  
+                    <div class="labelProduct__quantity">3 products for 60 usd / 20$ for each</div>
+                    <div class="labelProduct__discont">You safe 20% on each patent check</div>  
                   </div>                               
                 </label>
               </div>
@@ -130,8 +134,8 @@
                 <input class="formRadio__input" id="formProductTwo" type="radio" name="products" value="2" data-price="44">           
                 <label class="formRadio__label labelProduct _middleLabelProduct"  for="formProductTwo">
                   <div class="labelProduct__content">
-                    <div>2 products for 44 usd / 22$ for each</div>
-                    <div>You safe 12% on each patent check </div>  
+                    <div class="labelProduct__quantity">2 products for 44 usd / 22$ for each</div>
+                    <div class="labelProduct__discont">You safe 12% on each patent check </div>  
                   </div>                               
                 </label>
               </div>
@@ -140,14 +144,14 @@
                 <input class="formRadio__input" id="formProductOne" type="radio" name="products" value="1" data-price="24.99">           
                 <label class="formRadio__label labelProduct _lastLabelProduct"  for="formProductOne">
                   <div class="labelProduct__content">
-                    <div>1 product for 24.99 usd</div>              
+                    <div class="labelProduct__quantity">1 product for 24.99 usd</div>              
                   </div>                               
                 </label>
               </div>   
 
             </div>
   
-            <button type="submit" id="formProductSubmit">Continue</button>
+            <button class="btn" type="submit" id="formProductSubmit">Continue</button>
 
           </form>            
 

@@ -172,7 +172,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 23px 12px 15px 17px; }
+    padding: 17px 12px 0px 17px; }
     .formRadio__label::before {
       content: "";
       align-self: flex-start;
@@ -181,12 +181,12 @@ body {
       background-color: #fff;
       border: 1.5px solid #e1e3ee;
       border-radius: 50%;
-      margin: 0 10px 0 0; }
+      margin: 0 17px 0 0; }
     .formRadio__label::after {
       transition: transform 0.3s ease 0s;
       content: "";
       position: absolute;
-      top: 28px;
+      top: 22px;
       left: 22px;
       width: 12px;
       height: 12px;
@@ -196,6 +196,8 @@ body {
 
 .formRadio__product input[type="radio"]:checked + label {
   background: #f4f5fa; }
+  .formRadio__product input[type="radio"]:checked + label .labelProduct__discont {
+    color: #23C967; }
 
 .labelProduct__content {
   position: relative;
@@ -207,13 +209,18 @@ body {
 
 ._firstLabelProduct:hover, ._middleLabelProduct:hover, ._lastLabelProduct:hover {
   background: #f4f5fa; }
+  ._firstLabelProduct:hover .labelProduct__discont, ._middleLabelProduct:hover .labelProduct__discont, ._lastLabelProduct:hover .labelProduct__discont {
+    color: #23C967; }
 
 ._middleLabelProduct {
   border: 1.5px solid #e1e3ee; }
 
 ._lastLabelProduct {
   border-radius: 0px 0px 15px 15px;
-  border: 1.5px solid #e1e3ee; }
+  border: 1.5px solid #e1e3ee;
+  padding-bottom: 19px; }
+  ._lastLabelProduct .labelProduct__content {
+    top: 0; }
 
 .formValue__label {
   font-size: 16px;
@@ -227,6 +234,10 @@ body {
   color: #D0D3E2;
   padding-bottom: 7px;
   width: 100%; }
+.formValue__delete {
+  background: none;
+  width: 13px;
+  padding-left: 5px; }
 
 .btn {
   width: 370px;
@@ -238,5 +249,31 @@ body {
   line-height: 22px;
   color: #FFFFFF;
   margin-bottom: 11px; }
+
+._scroll {
+  overflow-y: scroll;
+  height: 368px;
+  margin-bottom: 25px;
+  scrollbar-width: thin;
+  scrollbar-color: #23C967 #E1E3EE; }
+  ._scroll::-webkit-scrollbar {
+    width: 4px; }
+  ._scroll::-webkit-scrollbar-track {
+    background: #E1E3EE; }
+  ._scroll::-webkit-scrollbar-thumb {
+    background: #23C967;
+    border-radius: 5px; }
+
+.labelProduct__quantity {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  padding-bottom: 5px; }
+
+.labelProduct__discont {
+  font-size: 13px;
+  line-height: 16px;
+  color: #A7A2CB; }
 
 /*# sourceMappingURL=style.css.map */
